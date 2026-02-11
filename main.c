@@ -36,7 +36,7 @@
 // Notes :
 //**********************************************************************************
 
-uint8_t* ucRemoveDuplicates(uint8_t *pinputString, char *pOutputString) 
+uint8_t* ucRemoveDuplicates(uint8_t *pinputString, uint8_t *pOutputString) 
 {
     uint16_t unIndex = 0;
 
@@ -45,7 +45,6 @@ uint8_t* ucRemoveDuplicates(uint8_t *pinputString, char *pOutputString)
         uint8_t unChar = pinputString[iDx1];
         bool blPresent = false;
 
-        // Check manually if c is already in uniqueString
         for (int32_t iDx2 = 0; iDx2 < unIndex; iDx2++) 
         {
             if (pOutputString[iDx2] == unChar) 
@@ -60,16 +59,16 @@ uint8_t* ucRemoveDuplicates(uint8_t *pinputString, char *pOutputString)
             pOutputString[unIndex++] = unChar;
         }
     }
-    pOutputString[unIndex] = '\0'; // null terminate
+    pOutputString[unIndex] = '\0'; 
 
-    return pOutputString; // return pointer to caller's buffer
+    return pOutputString; 
 }
 //*********************** Class Method Implementations ************************ 
  
 int main() 
 {
     uint8_t ucInputString[ARRAY_SIZE];
-    uint8_t ucOutputString[ARRAY_SIZE]; // caller provides buffer
+    uint8_t ucOutputString[ARRAY_SIZE]; 
 
     printf("Enter a string: ");
     if (fgets(ucInputString, sizeof(ucInputString), stdin) != NULL) 
