@@ -8,5 +8,5 @@ This project demonstrates a simple C program that removes duplicate characters f
 - `.gitignore`: Configured to exclude executable files.
 
 ## Compile & Run 
-gcc main.c -o main 
-./main.exe
+- gcc main.c -o main 
+- ./main.exe
