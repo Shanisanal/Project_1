@@ -1,11 +1,11 @@
-//**************************** PROJECT X ****************************** 
-//  Copyright (c) 2021 Trenser 
+//**************************** PROJECT 1 ****************************** 
+//  Copyright (c) 2026 Trenser Technology Solutions
 //  All Rights Reserved 
 //***************************************************************************** 
 // 
 // File     : main.c
 // Summary  : Removes duplicate characters from a string 
-// Note     : 
+// Note     : None
 // Author   : Shani Sanal
 // Date     : 10 Feb 2026
 // 
@@ -27,13 +27,14 @@
 //***************************** Local Variables ******************************* 
  
 //****************************** Local Functions ****************************** 
-//******************************.FUNCTION_HEADER.****************************** 
-// Purpose : Removes duplicate characters from an input string and writes the unique characters into the provided output buffer. 
-// Inputs : pinputString - Pointer to the input string (null-terminated) 
-//          pOutputString - Pointer to the caller-provided buffer where the // result will be stored 
-// Outputs : pOutputString - Contains the string with duplicates removed 
-// Return : uint8_t* - Pointer to the output buffer containing the // processed string 
-// Notes :
+
+//******************************.ucRemoveDuplicates.****************************** 
+// Purpose  :   Removes duplicate characters from an input string and writes the unique characters into the provided output buffer. 
+// Inputs   :   pinputString - Pointer to the input string (null-terminated) 
+//              pOutputString - Pointer to the caller-provided buffer where the result will be stored 
+// Outputs  :   pOutputString - Contains the string with duplicates removed 
+// Return   :   uint8_t* - Pointer to the output buffer containing the processed string 
+// Notes    :   None
 //**********************************************************************************
 
 uint8_t* ucRemoveDuplicates(uint8_t *pinputString, uint8_t *pOutputString) 
