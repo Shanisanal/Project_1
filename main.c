@@ -30,20 +30,25 @@
 
 //******************************.RemoveDuplicates.****************************** 
 // Purpose  :   Removes duplicate characters from an input string and writes the unique characters into the provided output buffer. 
-// Inputs   :   pinputString - Pointer to the input string (null-terminated) 
+// Inputs   :   pInputString - Pointer to the input string (null-terminated) 
 //              pOutputString - Pointer to the caller-provided buffer where the result will be stored 
 // Outputs  :   pOutputString - Contains the string with duplicates removed 
 // Return   :   uint8_t* - Pointer to the output buffer containing the processed string 
 // Notes    :   None
 //**********************************************************************************
 
-uint8_t* RemoveDuplicates(uint8_t *pinputString, uint8_t *pOutputString) 
+uint8_t* RemoveDuplicates(uint8_t *pInputString, uint8_t *pOutputString) 
 {
     uint16_t unIndex = 0;
 
-    for (uint16_t unInputStrIndex = 0; pinputString[unInputStrIndex] != '\0'; unInputStrIndex++) 
+    if (pInputString == NULL || pOutputString == NULL) 
+    { 
+        return NULL;
+    }
+
+    for (uint16_t unInputStrIndex = 0; pInputString[unInputStrIndex] != '\0'; unInputStrIndex++) 
     {
-        uint8_t ucChar = pinputString[unInputStrIndex];
+        uint8_t ucChar = pInputString[unInputStrIndex];
         bool blPresent = false;
 
         for (uint16_t unCheckIndex = 0; unCheckIndex < unIndex; unCheckIndex++) 
