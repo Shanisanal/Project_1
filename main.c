@@ -36,7 +36,6 @@
 // Return   :   uint8_t* - Pointer to the output buffer containing the processed string 
 // Notes    :   None
 //**********************************************************************************
-
 uint8_t* RemoveDuplicates(uint8_t *pInputString, uint8_t *pOutputString) 
 {
     uint16_t unIndex = 0;
@@ -100,5 +99,6 @@ int main()
 
     return 0;
 }
+
 // EOF 
 
