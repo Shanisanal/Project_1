@@ -64,12 +64,20 @@ uint8_t* ucRemoveDuplicates(uint8_t *pinputString, uint8_t *pOutputString)
 
     return pOutputString; 
 }
-//*********************** Class Method Implementations ************************ 
- 
+//************************************.main.*************************************
+// Purpose  :   Entry point of the program. Reads an input string from the user,
+//              removes duplicate characters using ucRemoveDuplicates, and 
+//              displays the processed result. 
+// Inputs   :   None 
+// Outputs  :   Prints the output string after removing duplicates from the user input string.
+// Return   :   0
+// Notes    :   Nil
+//********************************************************************************
+
 int main() 
 {
-    uint8_t ucInputString[ARRAY_SIZE];
-    uint8_t ucOutputString[ARRAY_SIZE]; 
+    uint8_t ucInputString[ARRAY_SIZE]  = {0};
+    uint8_t ucOutputString[ARRAY_SIZE] = {0}; 
 
     printf("Enter a string: ");
     if (fgets(ucInputString, sizeof(ucInputString), stdin) != NULL) 
