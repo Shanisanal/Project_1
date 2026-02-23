@@ -41,14 +41,14 @@ uint8_t* RemoveDuplicates(uint8_t *pinputString, uint8_t *pOutputString)
 {
     uint16_t unIndex = 0;
 
-    for (int32_t iDx1 = 0; pinputString[iDx1] != '\0'; iDx1++) 
+    for (uint16_t unInputStrIndex = 0; pinputString[unInputStrIndex] != '\0'; unInputStrIndex++) 
     {
-        uint8_t ucChar = pinputString[iDx1];
+        uint8_t ucChar = pinputString[unInputStrIndex];
         bool blPresent = false;
 
-        for (int32_t iDx2 = 0; iDx2 < unIndex; iDx2++) 
+        for (uint16_t unCheckIndex = 0; unCheckIndex < unIndex; unCheckIndex++) 
         {
-            if (pOutputString[iDx2] == ucChar) 
+            if (pOutputString[unCheckIndex] == ucChar) 
             {
                 blPresent = true;
                 break;
