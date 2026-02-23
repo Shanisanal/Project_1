@@ -28,7 +28,7 @@
  
 //****************************** Local Functions ****************************** 
 
-//******************************.ucRemoveDuplicates.****************************** 
+//******************************.RemoveDuplicates.****************************** 
 // Purpose  :   Removes duplicate characters from an input string and writes the unique characters into the provided output buffer. 
 // Inputs   :   pinputString - Pointer to the input string (null-terminated) 
 //              pOutputString - Pointer to the caller-provided buffer where the result will be stored 
@@ -37,7 +37,7 @@
 // Notes    :   None
 //**********************************************************************************
 
-uint8_t* ucRemoveDuplicates(uint8_t *pinputString, uint8_t *pOutputString) 
+uint8_t* RemoveDuplicates(uint8_t *pinputString, uint8_t *pOutputString) 
 {
     uint16_t unIndex = 0;
 
@@ -66,7 +66,7 @@ uint8_t* ucRemoveDuplicates(uint8_t *pinputString, uint8_t *pOutputString)
 }
 //************************************.main.*************************************
 // Purpose  :   Entry point of the program. Reads an input string from the user,
-//              removes duplicate characters using ucRemoveDuplicates, and 
+//              removes duplicate characters using RemoveDuplicates, and 
 //              displays the processed result. 
 // Inputs   :   None 
 // Outputs  :   Prints the output string after removing duplicates from the user input string.
@@ -89,7 +89,7 @@ int main()
         }
     }
 
-    uint8_t *ucResult = ucRemoveDuplicates(ucInputString, ucOutputString);
+    uint8_t *ucResult = RemoveDuplicates(ucInputString, ucOutputString);
     
     printf("String without duplicates: %s\n", ucResult);
 
