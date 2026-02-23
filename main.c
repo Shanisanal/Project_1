@@ -43,12 +43,12 @@ uint8_t* RemoveDuplicates(uint8_t *pinputString, uint8_t *pOutputString)
 
     for (int32_t iDx1 = 0; pinputString[iDx1] != '\0'; iDx1++) 
     {
-        uint8_t unChar = pinputString[iDx1];
+        uint8_t ucChar = pinputString[iDx1];
         bool blPresent = false;
 
         for (int32_t iDx2 = 0; iDx2 < unIndex; iDx2++) 
         {
-            if (pOutputString[iDx2] == unChar) 
+            if (pOutputString[iDx2] == ucChar) 
             {
                 blPresent = true;
                 break;
@@ -57,7 +57,7 @@ uint8_t* RemoveDuplicates(uint8_t *pinputString, uint8_t *pOutputString)
 
         if (!blPresent) 
         {
-            pOutputString[unIndex++] = unChar;
+            pOutputString[unIndex++] = ucChar;
         }
     }
     pOutputString[unIndex] = '\0'; 
